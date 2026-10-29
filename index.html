@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ژرف | دفترچه استراتژی برند</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+/* فونت پیدا: اگر روی سیستم نصب باشد یا فایل‌ها کنار این HTML در پوشه fonts باشند استفاده می‌شود؛ در غیر این‌صورت وزیرمتن */
+@font-face{font-family:Peyda;font-weight:300;src:local("Peyda Light"),local("Peyda-Light"),url(fonts/Peyda-Light.woff2) format("woff2")}
+@font-face{font-family:Peyda;font-weight:400;src:local("Peyda Regular"),local("Peyda-Regular"),local("Peyda"),url(fonts/Peyda-Regular.woff2) format("woff2")}
+@font-face{font-family:Peyda;font-weight:600;src:local("Peyda SemiBold"),local("Peyda-SemiBold"),url(fonts/Peyda-SemiBold.woff2) format("woff2")}
+@font-face{font-family:Peyda;font-weight:800;src:local("Peyda ExtraBold"),local("Peyda-ExtraBold"),url(fonts/Peyda-ExtraBold.woff2) format("woff2")}
+:root{--b:#0A84FF;--g:#30D158;--k:#000;--ink:#1d1d1f;--mut:#6e6e73;--bg:#f5f5f7;--grad:linear-gradient(100deg,#0A84FF,#30D158)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{font-family:Peyda,Vazirmatn,system-ui,sans-serif;background:#fff;color:var(--ink);line-height:1.9;-webkit-font-smoothing:antialiased}
+nav{position:fixed;inset:0 0 auto;z-index:9;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 max(20px,5vw);background:rgba(0,0,0,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px)}
+nav b{color:#fff;letter-spacing:.3em;font-size:14px;font-weight:600}
+nav div{display:flex;gap:22px;overflow-x:auto;scrollbar-width:none}
+nav a{color:#d2d2d7;font-size:12px;text-decoration:none;white-space:nowrap}nav a:hover{color:#fff}
+.hero{min-height:100vh;background:radial-gradient(60% 50% at 50% 38%,rgba(10,132,255,.35),transparent 70%),radial-gradient(40% 35% at 70% 60%,rgba(48,209,88,.22),transparent 70%),#000;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 24px 60px}
+.hero small{letter-spacing:.4em;color:#86868b;font-size:13px}
+.hero h1{font-size:clamp(72px,17vw,200px);line-height:1.05;letter-spacing:.06em;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;direction:ltr}
+.hero h2{font-size:clamp(44px,9vw,96px);font-weight:600;line-height:1.3}
+.hero p{font-size:clamp(18px,2.6vw,28px);color:#a1a1a6;font-weight:300;margin-top:10px}
+.pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:44px}
+.pill{padding:10px 22px;border-radius:99px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);font-size:15px;backdrop-filter:blur(12px)}
+.pill em{font-style:normal;color:var(--g);margin-inline-start:6px}
+section{padding:clamp(70px,11vw,140px) max(22px,6vw)}
+.in{max-width:1080px;margin:auto}
+.dark{background:#000;color:#f5f5f7}.light{background:var(--bg)}
+.k{color:var(--b);font-weight:600;font-size:15px;letter-spacing:.04em;direction:ltr;text-align:right}
+.dark .k{color:var(--g)}
+h2.t{font-size:clamp(34px,6vw,64px);line-height:1.25;font-weight:800;margin:6px 0 18px;letter-spacing:-.01em}
+.lead{font-size:clamp(18px,2.3vw,25px);color:var(--mut);max-width:820px;font-weight:300}
+.dark .lead{color:#a1a1a6}
+h3{font-size:22px;font-weight:600;margin-bottom:8px}
+.grid{display:grid;gap:16px;margin-top:44px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.card{background:#fff;border-radius:28px;padding:30px;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.light .card{background:#fff}
+.dark .card{background:#1c1c1e}
+.card p,.card li{color:var(--mut);font-size:16px}
+.dark .card p,.dark .card li{color:#a1a1a6}
+.card .l{font-size:13px;color:var(--b);font-weight:600;margin-bottom:6px;direction:ltr;text-align:right}
+.dark .card .l{color:var(--g)}
+.big{font-size:clamp(28px,4.6vw,52px);font-weight:800;line-height:1.4}
+.gt{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+ul{list-style:none;padding:0}
+ul.ck li{position:relative;padding:3px 22px 3px 0}
+ul.ck li:before{content:"";position:absolute;right:0;top:15px;width:8px;height:8px;border-radius:50%;background:var(--grad)}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.tag{padding:7px 16px;border-radius:99px;background:rgba(10,132,255,.1);color:var(--b);font-size:15px;font-weight:600}
+.dark .tag{background:rgba(48,209,88,.14);color:var(--g)}
+.tag.x{background:rgba(255,69,58,.1);color:#d70015}
+.stat{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid rgba(128,128,128,.22)}
+.stat:last-child{border:0}.stat span:first-child{color:var(--mut);flex:none}.stat span:last-child{font-weight:600;text-align:left}
+.dark .stat span:first-child{color:#86868b}
+.note{margin-top:32px;padding:22px 28px;border-radius:22px;background:rgba(10,132,255,.08);border:1px solid rgba(10,132,255,.2);font-size:17px}
+.dark .note{background:rgba(48,209,88,.08);border-color:rgba(48,209,88,.25)}
+.note b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.num{font-size:44px;font-weight:800;line-height:1;margin-bottom:10px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sw{display:flex;gap:10px;margin-top:20px}.sw i{flex:1;height:64px;border-radius:16px;border:1px solid rgba(128,128,128,.3)}
+.end{text-align:center}.end .big{margin:14px 0}
+footer{background:#000;color:#6e6e73;text-align:center;padding:40px;font-size:13px;letter-spacing:.2em;direction:ltr}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}.rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><b>ZHARF</b><div><a href="#s1">برند</a><a href="#s4">چشم‌انداز</a><a href="#s7">مخاطب</a><a href="#s10">معماری</a><a href="#s11">شخصیت</a><a href="#s15">هویت بصری</a><a href="#s18">اصول</a><a href="#s20">نقشه راه</a></div></nav>
+
+<header class="hero">
+<small>BRAND STRATEGY BOOK · VERSION 1.0</small>
+<h1>ZHARF</h1>
+<h2>ژرف</h2>
+<p>دفترچه استراتژی برند</p>
+<div class="pills"><span class="pill">جوهره برند<em>عمق تجربه</em></span><span class="pill">وعده برند<em>تخصصی که به تجربه تبدیل می‌شود</em></span></div>
+</header>
+
+<section id="s1" class="light"><div class="in rv">
+<p class="k">01 · Brand Introduction</p><h2 class="t">معرفی برند</h2>
+<p class="lead">ژرف یک رستری تخصصی قهوه است که دانش و مهارت رست را با تجربه حسی قهوه پیوند می‌دهد؛ با تمرکز بر کیفیت محصول، دقت در رست و تجربه‌ای عمیق‌تر از طعم. در کنار بلندهای روزمره، قهوه‌های تخصصی محدود عرضه می‌کند که هرکدام نماینده خاستگاه، مزرعه، گونه، فرآوری و ویژگی‌های حسی متفاوتی‌اند.</p>
+<div class="grid g2"><div class="card">
+<div class="stat"><span>نام فارسی</span><span>ژرف</span></div>
+<div class="stat"><span>نام لاتین کاری</span><span>ZHARF</span></div>
+<div class="stat"><span>حوزه فعالیت</span><span>رست و عرضه قهوه</span></div>
+<div class="stat"><span>جایگاه مطلوب</span><span>رستری تخصصی پریمیوم</span></div></div>
+<div class="card">
+<div class="stat"><span>بازار اولیه</span><span>ایران، تمرکز بر اصفهان</span></div>
+<div class="stat"><span>چشم‌انداز</span><span>بازارهای بین‌المللی</span></div>
+<div class="stat"><span>کانال‌های فروش</span><span>B2C و B2B</span></div>
+<div class="stat"><span>مخاطبان</span><span>کافه‌ها، باریستاها، علاقه‌مندان جدی قهوه</span></div></div></div>
+<p class="note">هدف بلندمدت: تبدیل‌شدن به برندی با <b>هویت مستقل</b> و استانداردهای قابل‌رقابت در بازارهای بین‌المللی.</p>
+</div></section>
+
+<section id="s2" class="dark"><div class="in rv">
+<p class="k">02 · Brand Strategy at a Glance</p><h2 class="t">خلاصه استراتژی</h2>
+<div class="grid g4">
+<div class="card"><p class="l">معنای نام</p><h3>عمق و ژرفا</h3><p>فراتر رفتن از سطح</p></div>
+<div class="card"><p class="l">جوهره</p><h3>عمق تجربه</h3></div>
+<div class="card"><p class="l">باور بنیادین</p><h3>کیفیت را باید احساس کرد</h3></div>
+<div class="card"><p class="l">تخصص محوری</p><h3>علم و هنر رست</h3></div>
+<div class="card"><p class="l">شخصیت</p><h3>استاد آرام، هنرمند تجربه‌گرا</h3></div>
+<div class="card"><p class="l">لحن</p><h3>تخصصی، آگاهانه، دقیق، ظریف</h3></div>
+<div class="card"><p class="l">جهت بصری</p><h3>لوکس مینیمال، تیره و عمیق</h3></div>
+<div class="card"><p class="l">تمایز</p><h3>پیوند تخصص فنی با تجربه حسی</h3></div></div>
+<p class="note"><b>اصل راهبردی:</b> تخصص، اعتبار ژرف را می‌سازد؛ تجربه حسی، آن را متمایز می‌کند.</p>
+</div></section>
+
+<section id="s3" class="light"><div class="in rv">
+<p class="k">03 · Business Definition</p><h2 class="t">شناخت کسب‌وکار و مدل فعالیت</h2>
+<div class="grid g2">
+<div class="card"><p class="l">B2B · بازار کسب‌وکارها</p><h3>کافه‌ها و باریستاهای حرفه‌ای</h3><p>نیاز: کیفیت قابل‌اعتماد، ثبات رست، اطلاعات دقیق محصول، تناسب قهوه با کاربرد و ارتباط حرفه‌ای با تأمین‌کننده. ژرف باید با کیفیت محصول و نحوه همکاری، اعتماد این گروه را جلب کند.</p></div>
+<div class="card"><p class="l">B2C · مصرف‌کننده نهایی</p><h3>انتخاب آگاهانه‌تر قهوه</h3><ul class="ck"><li>شناخت تفاوت قهوه‌ها</li><li>انتخاب متناسب با ذائقه</li><li>اطلاعات قابل‌فهم و راهنمای دم‌آوری</li><li>کیفیت قابل‌اعتماد و تجربه خرید ممتاز</li></ul></div></div>
+<p class="note"><b>اصل مشترک:</b> دو شخصیت متفاوت ساخته نمی‌شود؛ هویت ثابت است و شیوه ارائه اطلاعات و ارزش پیشنهادی متناسب با مخاطب تغییر می‌کند.</p>
+</div></section>
+
+<section id="s4" class="dark"><div class="in rv">
+<p class="k">04 · Vision, Mission &amp; Goals</p><h2 class="t">چشم‌انداز، مأموریت و هدف</h2>
+<div class="grid g2">
+<div class="card"><p class="l">Vision · چشم‌انداز</p><p style="font-size:19px;color:#f5f5f7">برندی بین‌المللی در دنیای قهوه که با تخصص در رست، کیفیت محصول و هویت متمایز شناخته می‌شود.</p></div>
+<div class="card"><p class="l">Mission · مأموریت</p><p style="font-size:19px;color:#f5f5f7">انتخاب و رست آگاهانه قهوه برای محصولاتی با کیفیت قابل‌اعتماد و ویژگی‌های حسی مشخص؛ از بلندهای روزمره تا نسخه‌های تخصصی محدود.</p></div>
+<div class="card"><h3>اهداف بلندمدت</h3><ul class="ck"><li>ساختن اعتبار حرفه‌ای در رست قهوه</li><li>رابطه پایدار با کافه‌ها و باریستاها</li><li>مشتریان تکرارشونده در B2C</li><li>سبد محصول منسجم با هویت مشترک</li><li>هویت برند مستقل و قابل‌شناسایی</li><li>آمادگی برای بازارهای بین‌المللی</li></ul></div>
+<div class="card"><h3>اهداف کوتاه‌مدت</h3><ul class="ck"><li>تثبیت هویت استراتژیک برند</li><li>تعریف دقیق محصولات اولیه</li><li>تعیین استانداردهای کیفیت و رست</li><li>طراحی هویت بصری و بسته‌بندی</li><li>زیرساخت فروش مستقیم و همکاری با کافه‌ها</li><li>تدوین نظام معرفی محصولات</li></ul></div></div>
+</div></section>
+
+<section id="s5" class="light"><div class="in rv">
+<p class="k">05 · Brand Philosophy</p><h2 class="t">فلسفه و باور بنیادین</h2>
+<p class="big gt">قهوه خوب، کیفیتی است که می‌توان آن را احساس کرد.</p>
+<p class="lead" style="margin-top:14px">کیفیت قهوه فقط در مشخصات فنی خلاصه نمی‌شود؛ در تجربه‌ای آشکار می‌شود که محصول در فنجان می‌سازد: عطر، طعم، تعادل، بافت و ویژگی‌های حسی.</p>
+<div class="grid g3">
+<div class="card"><div class="num">۱</div><h3>علم</h3><p>شناخت دانه، خاستگاه، فرآوری، رفتار قهوه هنگام رست و ارزیابی محصول.</p></div>
+<div class="card"><div class="num">۲</div><h3>مهارت</h3><p>تصمیم‌گیری دقیق در رست، کنترل کیفیت و توجه به جزئیات مؤثر بر نتیجه.</p></div>
+<div class="card"><div class="num">۳</div><h3>تجربه</h3><p>آنچه مخاطب از طریق عطر، طعم و دم‌آوری قهوه درک می‌کند.</p></div></div>
+<p class="note"><b>اصل مهم:</b> هنر در ژرف جایگزین دانش فنی نیست؛ نتیجه به‌کارگیری دانش و مهارت با دقت و حساسیت حسی است.</p>
+</div></section>
+
+<section id="s6" class="dark"><div class="in rv">
+<p class="k">06 · Brand Essence &amp; Promise</p><h2 class="t">جوهره و وعده برند</h2>
+<div class="grid g2">
+<div class="card"><p class="l">Brand Essence</p><p class="big gt">عمق تجربه</p><p>معنای نام ژرف را به محصول و تجربه مشتری وصل می‌کند: توجه به لایه‌های مختلف تجربه قهوه و امکان شناخت آن‌ها.</p></div>
+<div class="card"><p class="l">Brand Promise</p><p class="big gt">تخصصی که به تجربه تبدیل می‌شود.</p>
+<div class="tags"><span class="tag">انتخاب آگاهانه مواد اولیه</span><span class="tag">رست کنترل‌شده</span><span class="tag">ارزیابی کیفیت</span><span class="tag">اطلاعات صادقانه</span><span class="tag">راهنمای انتخاب و دم‌آوری</span></div></div></div>
+<div class="card" style="margin-top:16px"><h3>نتیجه مورد انتظار برای مشتری</h3><div class="tags"><span class="tag">اعتماد به کیفیت</span><span class="tag">درک تفاوت محصولات</span><span class="tag">انتخاب متناسب با سلیقه</span><span class="tag">تجربه قابل‌تکرار</span><span class="tag">کشف طعم‌های تازه</span></div></div>
+<p class="note">شعار نهایی هنوز انتخاب نشده است؛ وعده برند اصل راهنماست و شعار باید نسخه کوتاه و به‌یادماندنی آن باشد.</p>
+</div></section>
+
+<section id="s7" class="light"><div class="in rv">
+<p class="k">07 · Target Audience</p><h2 class="t">مخاطبان هدف</h2>
+<div class="grid g2">
+<div class="card"><p class="l">B2B · مخاطب حرفه‌ای</p><h3>صاحبان کافه، مدیران خرید، باریستاها</h3><p><b>نیازها:</b> کیفیت و ثبات، اطلاعات فنی قابل‌اعتماد، شناخت ویژگی‌های حسی، تناسب با روش تهیه، تأمین مستمر.</p><p style="margin-top:10px"><b>ارزش پیشنهادی:</b> قهوه‌ای با انتخاب و رست دقیق، همراه با اطلاعات لازم برای ارزیابی و استفاده حرفه‌ای.</p></div>
+<div class="card"><p class="l">B2C · مصرف‌کننده نهایی</p><h3>علاقه‌مندان به انتخاب آگاهانه</h3><p><b>نیازها:</b> شناخت طعم و شخصیت قهوه، انتخاب آسان، اطلاعات روشن، راهنمای دم‌آوری، تجربه خرید ممتاز.</p><p style="margin-top:10px"><b>ارزش پیشنهادی:</b> قهوه باکیفیت همراه با اطلاعاتی که به شناخت، انتخاب و لذت بردن کمک می‌کند.</p></div></div>
+<p class="note"><b>اصل مشترک:</b> تخصص برای هر دو گروه ثابت است؛ اطلاعات فنی برای حرفه‌ای‌ها با جزئیات بیشتر و انتخاب برای مصرف‌کننده ساده‌تر ارائه می‌شود.</p>
+</div></section>
+
+<section id="s8" class="dark"><div class="in rv">
+<p class="k">08 · Brand Positioning</p><h2 class="t">جایگاه‌یابی برند</h2>
+<p class="lead">دسته رقابتی: رستری تخصصی پریمیوم با فروش مستقیم به مصرف‌کننده و عرضه به کافه‌ها.</p>
+<div class="card" style="margin-top:36px"><p class="l">Positioning Statement</p><p style="font-size:20px;color:#f5f5f7">ژرف یک رستری تخصصی پریمیوم است که با تکیه بر دانش و هنر رست، کیفیت دانه و ویژگی‌های حسی قهوه را به تجربه‌ای عمیق و متمایز تبدیل می‌کند؛ برای کافه‌های حرفه‌ای و علاقه‌مندان جدی قهوه، از بلندهای روزمره تا نسخه‌های تخصصی محدود، با تعهد به کیفیت، اصالت و کشف طعم.</p></div>
+<div class="grid g3" style="margin-top:16px">
+<div class="card"><p class="l">مخاطب</p><h3>کافه‌های حرفه‌ای و علاقه‌مندان جدی</h3></div>
+<div class="card"><p class="l">نیاز اصلی</p><h3>کیفیت قابل‌اعتماد و تجربه طعمی ارزشمند</h3></div>
+<div class="card"><p class="l">نقطه تمایز</p><h3>پیوند تخصص فنی با تجربه حسی و هویت ممتاز</h3></div>
+<div class="card"><p class="l">دلیل باورپذیری</p><h3>کیفیت رست، کنترل کیفیت، اطلاعات دقیق</h3></div>
+<div class="card"><p class="l">نتیجه مطلوب</p><h3>اعتماد به محصول و تمایل به تجربه مجدد</h3></div>
+<div class="card"><p class="l">مراجع رقابتی</p><h3>صوبر (اصفهان) · ژاو (ایران)</h3></div></div>
+<p class="note">تا زمان تکمیل مقایسه، ادعای برتری یا تمایز قطعی ژرف در برابر این رقبا مطرح نمی‌شود.</p>
+</div></section>
+
+<section id="s9" class="light"><div class="in rv">
+<p class="k">09 · Differentiation</p><h2 class="t">تمایز و مزیت رقابتی</h2>
+<p class="big gt">تخصص در رست، با تجربه حسی دقیق و هویتی ممتاز.</p>
+<p class="lead" style="margin-top:14px">تمایز زمانی به مزیت تبدیل می‌شود که برای مشتری مهم باشد، در محصول یا تجربه قابل‌مشاهده باشد، مستمر ارائه شود و دلیلی معنادار برای انتخاب بسازد.</p>
+<div class="grid g4">
+<div class="card"><h3>کیفیت</h3><p>استانداردهای روشن برای رست و ارزیابی محصول</p></div>
+<div class="card"><h3>تجربه</h3><p>اطلاعات حسی دقیق و کمک به انتخاب و دم‌آوری</p></div>
+<div class="card"><h3>محصول</h3><p>سبدی منسجم از بلندهای روزمره و قهوه‌های تخصصی</p></div>
+<div class="card"><h3>برند</h3><p>هویتی آرام، دقیق، پریمیوم و قابل‌شناسایی</p></div>
+<div class="card"><h3>ارتباط با مشتری</h3><p>تجربه خرید و همکاری قابل‌اعتماد در B2B و B2C</p></div></div>
+</div></section>
+
+<section id="s10" class="dark"><div class="in rv">
+<p class="k">10 · Brand Architecture</p><h2 class="t">معماری برند و خانواده محصولات</h2>
+<p class="lead">همه محصولات زیر نام ZHARF عرضه می‌شوند. تفاوت‌ها از طریق نام‌گذاری، اطلاعات و طراحی بسته‌بندی مدیریت می‌شود، نه زیربرندهای مستقل.</p>
+<div class="grid g2">
+<div class="card"><p class="l">Everyday Blends</p><h3>بلندهای روزمره</h3><p>پایه‌ای قابل‌اعتماد برای خرید روزمره و خرید مجدد. محصولات اولیه: بلند ۵۰/۵۰ و قهوه ۱۰۰٪ عربیکا.</p><ul class="ck" style="margin-top:12px"><li>اطلاعات روشن درباره ترکیب</li><li>معرفی دقیق ویژگی‌های حسی</li><li>راهنمای کاربرد و دم‌آوری</li><li>تأکید بر کیفیت و ثبات</li></ul><p style="margin-top:12px">روزمره، یعنی نه کم‌اهمیت و نه کم‌کیفیت.</p></div>
+<div class="card"><p class="l">Specialty Editions</p><h3>نسخه‌های تخصصی</h3><p>قهوه‌های تخصصی محدود با ویژگی‌های مشخص و فرصتی برای کشف طعم‌های متفاوت.</p><ul class="ck" style="margin-top:12px"><li>خاستگاه، منطقه و مزرعه (در صورت تأیید)</li><li>گونه و روش فرآوری</li><li>پروفایل حسی و اطلاعات رست</li><li>پیشنهاد دم‌آوری و شماره بچ</li></ul><p style="margin-top:12px">محدودبودن باید واقعی باشد و به‌خودی‌خود نشانه کیفیت بالاتر نیست.</p></div></div>
+<div class="card" style="margin-top:16px"><h3>سیستم مشترک</h3><div class="tags"><span class="tag">نام و هویت اصلی ژرف</span><span class="tag">زبان کلامی مشترک</span><span class="tag">دقت یکسان در اطلاعات</span><span class="tag">تعلق بصری به یک برند</span><span class="tag">تفاوت بدون از دست رفتن انسجام</span></div></div>
+</div></section>
+
+<section id="s11" class="light"><div class="in rv">
+<p class="k">11 · Brand Personality &amp; 12 · Archetypes</p><h2 class="t">شخصیت و کهن‌الگوها</h2>
+<div class="grid g2">
+<div class="card"><p class="l">The Quiet Master</p><h3>استاد آرام</h3><p>متخصصی که برای جلب توجه بیش‌ازحد تلاش نمی‌کند.</p><div class="tags"><span class="tag">آرام</span><span class="tag">دقیق</span><span class="tag">مطمئن</span><span class="tag">باسلیقه</span><span class="tag">اصیل</span><span class="tag">کم‌ادعا</span></div></div>
+<div class="card"><p class="l">The Experimental Artisan</p><h3>هنرمند تجربه‌گرا</h3><p>تجربه‌گرا بدون قربانی‌کردن دقت.</p><div class="tags"><span class="tag">کنجکاو</span><span class="tag">خلاق</span><span class="tag">حساس به جزئیات</span><span class="tag">کاشف طعم‌های تازه</span></div></div></div>
+<p class="note"><b>ترکیب:</b> ژرف در اجرا دقیق است و در تجربه، کنجکاو.</p>
+<div class="grid g2" style="margin-top:32px">
+<div class="card"><p class="l">Primary · Sage</p><h3>دانا</h3><p>دانش، مشاهده، دقت و فهم عمیق: اطلاعات قابل‌اعتماد، تأکید بر تخصص و پرهیز از ادعاهای اغراق‌آمیز.</p></div>
+<div class="card"><p class="l">Complementary · Creator</p><h3>آفریننده</h3><p>خلق، تجربه و حساسیت زیبایی‌شناختی: هنر رست، تجربه‌های طعمی، نسخه‌های محدود و هویت بصری مستقل.</p></div></div>
+<div class="card" style="margin-top:16px"><h3>رفتارهای مطلوب</h3><ul class="ck"><li>اطلاعات را دقیق و روشن ارائه می‌کند و درباره کیفیت ادعای بی‌پشتوانه نمی‌کند.</li><li>تفاوت محصولات را با جزئیات واقعی نشان می‌دهد و به پرسش‌های حرفه‌ای با دقت پاسخ می‌دهد.</li><li>تجربه‌های تازه را با توضیح روشن معرفی می‌کند و از هیجان ساختگی و تجمل نمایشی دوری می‌کند.</li></ul></div>
+</div></section>
+
+<section id="s13" class="dark"><div class="in rv">
+<p class="k">13 · Verbal Identity</p><h2 class="t">هویت کلامی و لحن</h2>
+<p class="big gt">دانش در کلام، هنر در بیان.</p>
+<div class="grid g3">
+<div class="card"><h3>تخصصی</h3><p>اطلاعات واقعی درباره قهوه</p></div><div class="card"><h3>دقیق</h3><p>واژه‌ها بر اساس ویژگی محصول</p></div><div class="card"><h3>آرام</h3><p>پرهیز از هیجان تبلیغاتی</p></div>
+<div class="card"><h3>حسی</h3><p>توصیف مشخص و قابل‌درک تجربه</p></div><div class="card"><h3>ظریف</h3><p>استفاده سنجیده از زبان و تصویر</p></div><div class="card"><h3>اصیل</h3><p>پرهیز از ادعاهای غیرقابل‌اثبات</p></div></div>
+<div class="grid g2">
+<div class="card"><h3>لحن نامناسب</h3><div class="tags"><span class="tag x">بهترین قهوه جهان</span><span class="tag x">تجربه‌ای جادویی و بی‌نظیر</span><span class="tag x">کیفیتی فراتر از تصور</span><span class="tag x">قهوه‌ای که زندگی شما را تغییر می‌دهد</span></div></div>
+<div class="card"><h3>نمونه لحن مناسب</h3><p class="big gt" style="font-size:26px;direction:ltr;text-align:left">Defined by origin.<br>Refined through roasting.</p><p>«برآمده از خاستگاه؛ پرداخت‌یافته در رست.» نمونه‌ای برای نمایش لحن است، نه شعار نهایی.</p></div></div>
+<p class="note"><b>زبان محصول:</b> کشور و منطقه، مزرعه (در صورت تأیید)، گونه و فرآوری، نت‌های طعمی، پروفایل رست، روش‌های دم‌آوری. در بازار بین‌المللی از واژگان رایج صنعت قهوه استفاده می‌شود.</p>
+</div></section>
+
+<section id="s14" class="light"><div class="in rv">
+<p class="k">14 · Brand Experience</p><h2 class="t">اصول تجربه برند</h2>
+<div class="grid g4">
+<div class="card"><h3>پیش از خرید</h3><ul class="ck"><li>مقایسه آسان محصولات</li><li>درک تفاوت خانواده‌ها</li><li>دسترسی به مشخصات قهوه</li><li>انتخاب متناسب با دم‌آوری</li></ul></div>
+<div class="card"><h3>هنگام خرید</h3><ul class="ck"><li>اطلاعات روشن</li><li>قیمت و وزن مشخص</li><li>بسته‌بندی هم‌شخصیت برند</li><li>فرایند ساده و قابل‌اعتماد</li></ul></div>
+<div class="card"><h3>پس از خرید</h3><ul class="ck"><li>هماهنگی کیفیت با انتظار</li><li>راهنمای دم‌آوری</li><li>امکان پاسخ و بازخورد</li><li>یافتن دوباره محصول</li></ul></div>
+<div class="card"><h3>مشتری حرفه‌ای</h3><p>علاوه بر محصول: پاسخ‌گویی، نظم تأمین، اطلاعات تخصصی و قابلیت اتکای همکاری.</p></div></div>
+<p class="note"><b>اصل راهبردی:</b> تجربه ممتاز باید از عملکرد واقعی برند ناشی شود، نه فقط از ظاهر محصول.</p>
+</div></section>
+
+<section id="s15" class="dark"><div class="in rv">
+<p class="k">15 · Visual Direction &amp; 16 · Packaging</p><h2 class="t">هویت بصری و بسته‌بندی</h2>
+<p class="big gt">لوکس مینیمال، تیره، عمیق و دقیق.</p>
+<p class="lead" style="margin-top:14px">راهنمای ورود به مرحله طراحی است و هنوز هویت بصری نهایی نیست. حس کیفیت، وقار و تخصص، بدون تجمل افراطی یا تزئین غیرضروری.</p>
+<div class="grid g3">
+<div class="card"><h3>سادگی هدفمند</h3><p>هر عنصر نقشی مشخص دارد؛ فضای خالی و سلسله‌مراتب مهم است.</p></div>
+<div class="card"><h3>عمق بصری</h3><p>رنگ، بافت و تضادهای ظریف، بدون کلیشه.</p></div>
+<div class="card"><h3>تایپوگرافی دقیق</h3><p>ZHARF متمایز و خوانا؛ طراحی نام فارسی بخشی از ریشه برند.</p></div>
+<div class="card"><h3>تخصص قابل‌مشاهده</h3><p>اطلاعات محصول جای مشخص دارند و زیر تزئین گم نمی‌شوند.</p></div>
+<div class="card"><h3>پرهیز از تجمل نمایشی</h3><p>لوکس‌بودن از کیفیت اجرا، تناسب و دقت می‌آید.</p></div>
+<div class="card"><h3>جهت رنگ</h3><p>مشکی، زغالی، خاکستری‌های عمیق و یک رنگ مکمل محدود؛ پالت نهایی پس از آزمون و ارزیابی خوانایی.</p><div class="sw"><i style="background:#000"></i><i style="background:#1c1c1e"></i><i style="background:#3a3a3c"></i><i style="background:var(--grad)"></i></div></div></div>
+<div class="grid g3" style="margin-top:16px">
+<div class="card"><h3>کار بسته‌بندی</h3><ul class="ck"><li>معرفی برند</li><li>انتقال کیفیت و شخصیت محصول</li><li>اطلاعات کاربردی و خوانا</li></ul></div>
+<div class="card"><h3>بلندهای روزمره</h3><ul class="ck"><li>تشخیص آسان و خوانایی بالا</li><li>اطلاعات روشن</li><li>مناسب خریدهای تکرارشونده</li></ul></div>
+<div class="card"><h3>نسخه‌های تخصصی</h3><ul class="ck"><li>خاستگاه، منطقه یا مزرعه، گونه</li><li>فرآوری، پروفایل حسی، رست</li><li>دم‌آوری پیشنهادی، شناسه بچ</li></ul></div></div>
+<p class="note"><b>اصول اجرایی:</b> خوانایی بر تزئین مقدم است؛ جنس و پرداخت با قیمت و جایگاه متناسب باشد؛ ادعاها قابل‌تأیید باشند؛ طراحی در تولید واقعی قابل‌اجرا باشد؛ تجربه بازکردن بسته با شخصیت آرام برند هماهنگ باشد. هر دو خانواده در نگاه اول به یک برند تعلق دارند و تفاوتشان با رنگ مکمل، کدگذاری یا تایپوگرافی اطلاعات نشان داده می‌شود.</p>
+</div></section>
+
+<section id="s17" class="light"><div class="in rv">
+<p class="k">17 · Competitive Landscape</p><h2 class="t">چارچوب رقابتی و تحلیل بازار</h2>
+<div class="grid g2">
+<div class="card"><div class="num">۱</div><h3>اصفهان</h3><p>تمرکز بر صوبر و رستری‌های مرتبط با بازار محلی.</p></div>
+<div class="card"><div class="num">۲</div><h3>ایران</h3><p>تمرکز بر ژاو و رستری‌ها و برندهای مرتبط با دسته محصولات ژرف.</p></div></div>
+<div class="card" style="margin-top:16px"><h3>محورهای تحلیل رقبا</h3><div class="tags"><span class="tag">محصول</span><span class="tag">کیفیت و رست</span><span class="tag">قیمت</span><span class="tag">بسته‌بندی</span><span class="tag">فروش B2B</span><span class="tag">فروش B2C</span><span class="tag">هویت کلامی</span><span class="tag">اعتبار برند</span></div></div>
+<p class="note"><b>وضعیت فعلی:</b> هنوز اطلاعات یکپارچه درباره قیمت‌های هم‌رده، کیفیت واقعی فنجان، شرایط همکاری، ثبات رست و رضایت مشتریان ثبت نشده است. <b>فرضیه فرصت:</b> ترکیب تخصص رست، تجربه حسی و هویت پریمیوم در یک سیستم منسجم؛ تحقیق باید نشان دهد این ترکیب چقدر در بازار وجود دارد و چه سطح قیمتی با ارزش ارائه‌شده سازگار است.</p>
+</div></section>
+
+<section id="s18" class="dark"><div class="in rv">
+<p class="k">18 · Brand Principles</p><h2 class="t">اصول تصمیم‌گیری برند</h2>
+<div class="grid g3">
+<div class="card"><h3>کیفیت بر ادعا مقدم است</h3><p>هیچ پیامی نباید از کیفیت واقعی محصول جلوتر برود.</p></div>
+<div class="card"><h3>تخصص باید قابل‌درک باشد</h3><p>اطلاعات فنی دقیق و کمک‌کننده به انتخاب.</p></div>
+<div class="card"><h3>زیبایی‌شناسی هدفمند</h3><p>هر تصمیم بصری به شخصیت یا تجربه محصول کمک کند.</p></div>
+<div class="card"><h3>تفاوت محصولات واقعی باشد</h3><p>نسخه‌های تخصصی بر ویژگی‌های واقعی تعریف شوند.</p></div>
+<div class="card"><h3>یک برند، دو مسیر ارتباطی</h3><p>شخصیت مشترک؛ پیام و جزئیات متناسب با مخاطب.</p></div>
+<div class="card"><h3>اصالت بدون کلیشه</h3><p>ریشه فارسی نام بخشی از هویت است، اما نه وابسته به نمادهای سنتی.</p></div>
+<div class="card"><h3>آمادگی بین‌المللی</h3><p>نام، بسته‌بندی، اطلاعات و هویت بصری در بازارهای مختلف قابل‌استفاده باشند.</p></div></div>
+</div></section>
+
+<section id="s19" class="light"><div class="in rv">
+<p class="k">19 · Brand Success Metrics</p><h2 class="t">شاخص‌های موفقیت</h2>
+<div class="grid g4">
+<div class="card"><h3>محصول</h3><ul class="ck"><li>ثبات کیفیت بین بچ‌ها</li><li>انطباق با مشخصات</li><li>نرخ شکایت یا مرجوعی</li><li>بازخورد حسی</li></ul></div>
+<div class="card"><h3>فروش</h3><ul class="ck"><li>نرخ خرید مجدد</li><li>مشتریان فعال B2B</li><li>حفظ مشتریان کافه</li><li>فروش هر خانواده</li><li>میانگین ارزش سفارش</li><li>حاشیه سود محصول</li></ul></div>
+<div class="card"><h3>برند</h3><ul class="ck"><li>شناخت نام ژرف</li><li>تشخیص در میان مشابه‌ها</li><li>برداشت از تخصص و کیفیت</li><li>برداشت از جایگاه پریمیوم</li><li>انطباق تجربه با وعده</li></ul></div>
+<div class="card"><h3>تجربه مشتری</h3><ul class="ck"><li>سهولت انتخاب</li><li>رضایت از اطلاعات</li><li>رضایت از تجربه خرید</li><li>کیفیت پاسخ‌گویی</li><li>احتمال توصیه برند</li></ul></div></div>
+<p class="note">برای هر شاخص باید مقدار پایه، هدف زمانی و روش اندازه‌گیری مشخص شود.</p>
+</div></section>
+
+<section id="s20" class="dark"><div class="in rv">
+<p class="k">20 · Brand Development Roadmap</p><h2 class="t">نقشه راه توسعه برند</h2>
+<div class="grid g3">
+<div class="card"><div class="num">۱</div><h3>تکمیل استراتژی</h3><p>تأیید پلتفرم، تحلیل رقبا، اعتبارسنجی مخاطبان، اقتصاد محصول، استانداردهای کیفیت و رست.</p></div>
+<div class="card"><div class="num">۲</div><h3>هویت کلامی</h3><p>نهایی‌کردن نام لاتین، بررسی تلفظ، شعار، واژگان و اصول نگارش، الگوی معرفی محصول.</p></div>
+<div class="card"><div class="num">۳</div><h3>هویت بصری</h3><p>قلمرو خلاقه، لوگوتایپ لاتین و فارسی، تایپوگرافی، پالت رنگ، عناصر گرافیکی، تصاویر و بافت‌ها.</p></div>
+<div class="card"><div class="num">۴</div><h3>طراحی بسته‌بندی</h3><p>ساختار اطلاعات، بسته‌بندی دو خانواده، آزمون خوانایی، امکان تولید و هزینه.</p></div>
+<div class="card"><div class="num">۵</div><h3>نقاط تماس</h3><p>وب‌سایت و فروش آنلاین، شبکه‌های اجتماعی، ابزارهای B2B، کاتالوگ، راهنمای دم‌آوری.</p></div>
+<div class="card"><div class="num">۶</div><h3>راهنمای برند</h3><p>اصول لوگو، رنگ و تایپوگرافی، قواعد بسته‌بندی، لحن، انسجام در بازارهای مختلف.</p></div></div>
+</div></section>
+
+<section id="s21" class="light"><div class="in rv">
+<p class="k">21 · Open Questions &amp; Validation</p><h2 class="t">موارد نیازمند تحقیق و اعتبارسنجی</h2>
+<div class="grid g3">
+<div class="card"><h3>بازار و رقبا</h3><ul class="ck"><li>بررسی محصول و قیمت صوبر و ژاو</li><li>شناسایی رستری‌های دیگر</li><li>مقایسه بسته‌بندی و هویت بصری</li><li>بازخوردهای قابل‌اتکای مشتریان</li></ul></div>
+<div class="card"><h3>محصول و کیفیت</h3><ul class="ck"><li>مشخصات دقیق محصولات اولیه</li><li>استانداردهای رست</li><li>نظام ارزیابی حسی</li><li>معیارهای ثبات و مستندسازی خاستگاه</li></ul></div>
+<div class="card"><h3>قیمت و مدل کسب‌وکار</h3><ul class="ck"><li>هزینه تمام‌شده و حاشیه سود</li><li>قیمت محصولات مشابه</li><li>شرایط فروش B2B</li><li>سیاست قیمت نسخه‌های محدود</li></ul></div>
+<div class="card"><h3>نام و توسعه بین‌المللی</h3><ul class="ck"><li>تلفظ ZHARF در بازارهای هدف</li><li>معانی ناخواسته احتمالی</li><li>علائم تجاری مشابه و امکان ثبت</li><li>دامنه و شناسه‌های دیجیتال</li></ul></div>
+<div class="card"><h3>اعتبارسنجی جایگاه‌یابی</h3><ul class="ck"><li>مصاحبه با کافه‌ها و باریستاها</li><li>بازخورد مصرف‌کنندگان هدف</li><li>آزمون نمونه محصول</li><li>واکنش به بسته‌بندی و تمایل به خرید مجدد</li></ul></div></div>
+</div></section>
+
+<section class="dark end" style="background:radial-gradient(50% 60% at 50% 40%,rgba(10,132,255,.28),transparent 70%),radial-gradient(35% 40% at 65% 65%,rgba(48,209,88,.18),transparent 70%),#000"><div class="in rv">
+<p class="k" style="text-align:center">Summary</p><h2 class="t">جمع‌بندی نهایی</h2>
+<p class="lead" style="margin:auto">ژرف می‌خواهد برندی باشد که تخصص را در کیفیت واقعی محصول نشان می‌دهد و از طریق تجربه حسی و هویت ممتاز، آن را به تجربه‌ای متمایز تبدیل می‌کند. نام ژرف ایده مرکزی را در خود دارد: <b>عمق</b>.</p>
+<p class="big gt">جوهره: عمق تجربه</p>
+<p class="big gt">وعده: تخصصی که به تجربه تبدیل می‌شود</p>
+<p class="big gt">اصل: تخصص اعتبار می‌سازد؛ تجربه حسی تمایز</p>
+<p class="lead" style="margin:28px auto 0;font-size:16px">این نسخه نخست است؛ پیش از طراحی نهایی هویت بصری، فرضیه‌های بازار، قیمت‌گذاری، مخاطب و مزیت رقابتی باید با داده‌های واقعی اعتبارسنجی شوند.</p>
+</div></section>
+<footer>ZHARF · VERSION 1.0</footer>
+
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("on");io.unobserve(x.target)}}),{threshold:.08});
+document.querySelectorAll(".rv").forEach(n=>io.observe(n));
+</script>
+</body>
+</html>
