@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "name": "Amin Shahi",
+    "role": "Brand Designer & Strategist",
+    "tagline": "Designing brands through strategy, identity and experience."
+  },
+  "links": [
+    {
+      "label": "Telegram",
+      "url": "https://t.me/aminnshahi",
+      "icon": "telegram"
+    },
+    {
+      "label": "Channel",
+      "url": "https://t.me/moujdesign",
+      "icon": "channel"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/aminshahicom",
+      "icon": "instagram"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/amin-shahi-85b253303",
+      "icon": "linkedin"
+    },
+    {
+      "label": "Tiwall",
+      "url": "https://tiwall.com/aminshahi",
+      "icon": "tiwall"
+    },
+    {
+      "label": "Theatre Archive",
+      "url": "https://isfahantheaters.ir/person/pe-13571/%D8%A7%D9%85%DB%8C%D9%86-%D8%B4%D8%A7%D9%87%DB%8C",
+      "icon": "archive"
+    },
+    {
+      "label": "Pinterest",
+      "url": "https://pin.it/3zg640Ky5",
+      "icon": "pinterest"
+    }
+  ],
+  "club_url": "https://igdc.ir/"
+}
