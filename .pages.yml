@@ -1,0 +1,57 @@
+media:
+  input: images
+  output: images
+
+content:
+  - name: projects
+    label: Projects
+    type: file
+    path: data/projects.json
+    format: json
+    fields:
+      - name: projects
+        label: Projects
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "Page name = image folder name (English, no spaces, e.g. banki)", type: string, required: true }
+          - { name: title, label: Title, type: string, required: true }
+          - name: category
+            label: Category
+            type: select
+            options:
+              values: [Brand identity, Motion graphics, Interior design]
+          - { name: summary, label: One-line summary, type: text }
+          - { name: role, label: Your role, type: string }
+          - { name: client, label: Client, type: string }
+          - { name: year, label: Year, type: string }
+          - { name: tools, label: Tools, type: string }
+          - { name: description, label: Description (separate paragraphs with a blank line), type: text }
+          - { name: link, label: External link (optional), type: string }
+
+  - name: site
+    label: Site settings
+    type: file
+    path: data/site.json
+    format: json
+    fields:
+      - name: hero
+        label: Header
+        type: object
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: role, label: Title line, type: string }
+          - { name: tagline, label: Tagline, type: text }
+      - name: links
+        label: Contact links
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: url, label: URL, type: string }
+          - name: icon
+            label: Icon
+            type: select
+            options:
+              values: [telegram, channel, instagram, linkedin, tiwall, archive, pinterest, email, website]
+      - { name: club_url, label: Club website URL, type: string }
